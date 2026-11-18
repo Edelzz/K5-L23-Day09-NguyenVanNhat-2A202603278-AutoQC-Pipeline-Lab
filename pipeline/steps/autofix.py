@@ -27,13 +27,114 @@ Bẫy cần nghĩ tới (có test cho từng cái)
 
 Gợi ý: `yaml.safe_load / safe_dump`.
 """
-from collections import defaultdict  # noqa: F401
+from collections import defaultdict
 
-import yaml  # noqa: F401
+import yaml
 
-from ..common import ERROR, parse_yolo_line  # noqa: F401
+from ..common import ERROR, parse_yolo_line
+
+
+DROP_LINE = {"BAD_FORMAT", "BAD_CLASS_ID", "BOX_ZERO", "DUP_BOX"}
+REMOVE_IMAGE = {"DUP_IMAGE_EXACT", "DUP_IMAGE_NEAR", "LEAK_TEST", "CORRUPT_IMAGE", "BAD_SIZE"}
+
+
+def _change(image, line, action, before, after):
+    return {"image": image, "line": line, "action": action, "before": before, "after": after}
+
+
+def _clip_box(content):
+    class_id, cx, cy, width, height = parse_yolo_line(content)
+    left, top = cx - width / 2, cy - height / 2
+    right, bottom = cx + width / 2, cy + height / 2
+    if 0 <= left < right <= 1 and 0 <= top < bottom <= 1:
+        return content
+    left, top = max(0.0, left), max(0.0, top)
+    right, bottom = min(1.0, right), min(1.0, bottom)
+    if left >= right or top >= bottom:
+        return None
+    clipped = ((left + right) / 2, (top + bottom) / 2, right - left, bottom - top)
+    return " ".join([str(class_id), *(str(value) for value in clipped)])
+
+
+def _fix_lines(path, errors_by_line):
+    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    updated = []
+    fixes = []
+    for number, content in enumerate(lines, 1):
+        codes = errors_by_line.get(number, set())
+        if codes & DROP_LINE:
+            after = None
+        elif "BOX_OUT_OF_IMAGE" in codes:
+            after = _clip_box(content)
+        else:
+            after = content
+
+        if after is None:
+            fixes.append(_change(path.stem, number, "drop_line", content, ""))
+        else:
+            updated.append(after)
+            if after != content:
+                fixes.append(_change(path.stem, number, "clip_box", content, after))
+
+    if fixes:
+        path.write_text("".join(line + "\n" for line in updated), encoding="utf-8")
+    return fixes
+
+
+def _rename_classes(path, classes):
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, UnicodeError, yaml.YAMLError):
+        data = {}
+    if not isinstance(data, dict):
+        data = {}
+    before = data.get("names")
+    if before == classes:
+        return None
+    data["names"] = classes
+    path.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
+    return _change(path.name, None, "rename_classes", before, classes)
 
 
 def fix(ds, issues, cfg):
-    # TODO
-    raise NotImplementedError("autofix chưa làm")
+    errors_by_image = defaultdict(list)
+    for issue in issues:
+        if issue.severity == ERROR:
+            errors_by_image[issue.image].append(issue)
+
+    images = defaultdict(list)
+    for path in ds.image_files():
+        images[path.stem].append(path)
+
+    fixes = []
+    for stem, errors in sorted(errors_by_image.items()):
+        codes = {issue.code for issue in errors}
+        if "BAD_CLASS_NAME" in codes:
+            change = _rename_classes(ds.yaml_path, cfg["classes"])
+            if change is not None:
+                fixes.append(change)
+
+        label = ds.label_path(stem)
+        if codes & REMOVE_IMAGE:
+            removed_images = images.get(stem, [])
+            for path in removed_images:
+                path.unlink(missing_ok=True)
+            if removed_images or label.exists():
+                label.unlink(missing_ok=True)
+                fixes.append(_change(stem, None, "remove_image",
+                                     ", ".join(path.name for path in removed_images), ""))
+            continue
+
+        if not label.exists():
+            if "MISSING_LABEL_FILE" in codes and stem in images:
+                fixes.append(_change(stem, None, "needs_label", "(không có file)", "chuyển người gán"))
+            continue
+
+        errors_by_line = defaultdict(set)
+        for issue in errors:
+            if issue.line is not None and (issue.code in DROP_LINE or issue.code == "BOX_OUT_OF_IMAGE"):
+                errors_by_line[issue.line].add(issue.code)
+        if errors_by_line:
+            fixes.extend(_fix_lines(label, errors_by_line))
+
+    return fixes
