@@ -1,4 +1,4 @@
-# Báo cáo Day 09 — Nguyễn Văn Nhật, 2A202603278
+# Báo cáo Day 09 — Nguyễn Văn Nhất - 2A202603278
 
 ## 1. Kết luận trước
 **Hold** (mã thoát 10). Pipeline nhận 224 ảnh, loại 22 và xuất **202/224 ảnh** dưới dạng bản nháp `clean_v1`. Sau duyệt mô phỏng, còn 0 lỗi bắt buộc và **62/202 ảnh có cảnh báo (30,7%)**, vượt ngưỡng Hold 10% (`08_summary.json`).
