@@ -1,18 +1,21 @@
-# Báo cáo Day 09 — <Họ và tên>, <MSHV>
-
-> Xoá mọi `TODO(học viên)` và dòng gợi ý. Mỗi ý trả lời bằng **số lấy từ `submission/reports/`**, kèm mẫu số. Cả báo cáo ~1–2 trang.
+# Báo cáo Day 09 — Nguyễn Văn Nhật, 2A202603278
 
 ## 1. Kết luận trước
-TODO(học viên): pipeline kết luận **Release / Hold / Rework**? Bao nhiêu ảnh vào, bao nhiêu ảnh ra dataset? Lý do chính (1–3 câu).
+**Hold** (mã thoát 10). Pipeline nhận 224 ảnh, loại 22 và xuất **202/224 ảnh** dưới dạng bản nháp `clean_v1`. Sau duyệt mô phỏng, còn 0 lỗi bắt buộc và **62/202 ảnh có cảnh báo (30,7%)**, vượt ngưỡng Hold 10% (`08_summary.json`).
 
 ## 2. Lỗi và phân việc
-Lấy từ `02_error_list_v1` (gom theo mã lỗi). Cột "ai sửa": **máy** (autofix) hay **người** (hàng đợi); chỉ ghi những mã có mặt trong lô của bạn.
+Số đếm theo mã lấy từ 455 dòng phát hiện trong `02_error_list_v1.csv`. Một ảnh hoặc dòng nhãn có thể có nhiều phát hiện.
 
-| Mã lỗi | Số ảnh/dòng | Ai sửa (máy/người) | Vì sao |
-|---|---:|---|---|
-| TODO(học viên) | | | |
+| Mã lỗi và số phát hiện | Ai xử lý | Cách xử lý |
+|---|---|---|
+| `DUP_IMAGE_EXACT` 8, `LEAK_TEST` 5, `DUP_IMAGE_NEAR` 4, `BAD_SIZE` 3, `CORRUPT_IMAGE` 2 | Máy | Loại 22/224 ảnh ở bước nhận dữ liệu. |
+| `DUP_BOX` 7, `BAD_CLASS_ID` 6, `BOX_ZERO` 4, `BAD_FORMAT` 3 | Máy | Xóa 20 dòng nhãn lỗi theo số dòng gốc. |
+| `BOX_OUT_OF_IMAGE` 8, `BAD_CLASS_NAME` 2 | Máy | Cắt 8 khung về biên ảnh và chuẩn hóa tên lớp trong một lần ghi YAML. |
+| `MISSING_LABEL_FILE` 6 | Người | Sáu ảnh cần được gán nhãn. |
+| `POSSIBLE_MISSING` 267, `POSSIBLE_LOOSE_BOX` 58, `POSSIBLE_FALSE_POS` 25, `POSSIBLE_WRONG_CLASS` 22 | Người | Đối chiếu vật thể với khung và lớp trên ảnh. |
+| `EMPTY_LABEL` 12, `BOX_TINY` 6, `BOX_HUGE` 3, `CLASS_RARE` 4 | Người | Kiểm khung và ảnh nền. Xem riêng 4 cảnh báo cấp tập dữ liệu về lớp hiếm. |
 
-TODO(học viên): vì sao `05_review_queue.csv` xếp ảnh đầu hàng như vậy? Với ngân sách 80 ảnh, người xem được bao nhiêu lỗi ngữ nghĩa?
+Hàng đợi cộng trọng số cho từng cảnh báo, có xét độ tin cậy khi có, rồi xếp theo tổng điểm giảm dần. `NEEDS_LABEL` có trọng số 10. `img_0160` đứng đầu với 109,727 điểm do có nhiều cờ thiếu khung và nhầm lớp. Duyệt mô phỏng **80/147 ảnh**, gồm **74/80 ảnh có cảnh báo ngữ nghĩa**, bao phủ **301/371 dòng `POSSIBLE_*`** ở vòng 2. Đây là số cờ được đưa vào duyệt. Ví dụ khi xem ảnh, học viên ghi nhận `img_0001` thiếu khung `person`. Vòng 1 cũng ghi hai cờ `POSSIBLE_MISSING` cho ảnh này.
 
 ## 3. Calibration (2 ngưỡng)
 | Tham số | Khởi đầu | Đã chọn | Precision / Recall (trước → sau) | Lý do (đánh đổi) |
@@ -25,14 +28,17 @@ TODO(học viên): vì sao `05_review_queue.csv` xếp ảnh đầu hàng như v
 ## 4. Cửa chặn và điều pipeline KHÔNG bắt được
 Chạy `python -m pipeline.run --budget 0` với thư mục báo cáo và xuất riêng. Kết quả **Rework**, mã thoát **20**. Còn 6 lỗi bắt buộc và 136/202 ảnh có cảnh báo (67,3%). Pipeline ghi “KHÔNG xuất” và `Test-Path` trả về `False` cho thư mục xuất của lần chạy này.
 
-TODO(học viên): ≥ 2 điểm mù có bằng chứng (box lỏng nhẹ, nhầm lớp mà model lớn cũng nhầm, ảnh trùng biến đổi mạnh…).
+Hai điểm mù quan sát được:
+
+- **Ảnh gần trùng vượt ngưỡng.** Cặp cùng cảnh `img_0084`–`img_0074` có khoảng cách pHash 16 nên lọt qua ngưỡng 12 trong phép so nội bộ raw.
+- **Sai ngữ nghĩa có thể lọt qua.** Học viên ghi nhận khung số 2 ở `img_0002` gán túi đồ thành `person` và khung số 1 ở `img_0003` gán bus thành truck. Vòng 1 không ghi cờ `POSSIBLE_*` nào cho hai ảnh này.
 
 ## 5. Train: raw vs clean (tùy chọn, chấm riêng)
-Chưa train: ghi "chưa chạy" và lý do, rồi bỏ qua phần còn lại của mục này. Nếu đã train: dán bảng từ `submission/results/comparison.md` (model, epoch, seed, số ảnh train mỗi biến thể).
-
-TODO(học viên): chênh mAP50 (clean − raw) so với **độ lệch chuẩn giữa các seed**; kết luận **trung thực** (nằm trong nhiễu thì nói là chưa kết luận được); ≥ 2 giả thuyết giải thích (ảnh trùng/rò rỉ test trong `raw`, nhãn máy còn lại trong `clean`, test chỉ 100 ảnh…) và cách kiểm.
+**Chưa chạy.** Buổi này tập trung hoàn thành pipeline QC và kiểm chứng cửa chặn. Chưa có kết quả mAP để so sánh `raw` và `clean`.
 
 ## 6. Quyết định và ghi chú AI
-TODO(học viên): (a) quyết định cuối; nếu Hold/Rework cần làm gì để thành Release? (b) Dùng AI viết code? Ghi 3 dòng: prompt chính, cách bạn kiểm code AI, 1 lần AI sai. Không dùng: ghi "không dùng".
+Giữ **Hold**. Duyệt tiếp các ảnh còn cảnh báo và chạy lại QC. Với 202 ảnh, Release cần 0 lỗi bắt buộc và tối đa 20 ảnh còn cảnh báo chưa xử lý.
 
-*(Thưởng +2, tùy chọn)* CVAT: lọc `width < 20`, ảnh/số box khớp, đối chiếu `BOX_TINY` (xem docs/CVAT_FILTER.md), 1 câu về `can_review`.
+- **Yêu cầu AI:** triển khai từng module QC theo docstring và test của repo, rồi chạy kiểm chứng.
+- **Cách kiểm:** đọc diff, chạy test từng module, chạy bộ 79 test, sweep trên bộ calibration có lỗi chèn và kiểm chứng gate bằng `--budget 0`.
+- **Một lần AI sai:** lệnh test ban đầu dùng lại đường dẫn `--basetemp` cố định. Pytest cố xóa thư mục cũ và gặp `WinError 5`. Đổi sang đường dẫn mới cho mỗi lượt chạy đã khắc phục lỗi.
