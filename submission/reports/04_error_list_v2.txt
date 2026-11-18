@@ -1,0 +1,419 @@
+# Danh sách lỗi — SAU sửa tự động (v2)
+ảnh đã quét: 202
+
+label_format -> 10 dòng
+missing_labels -> 21 dòng
+second_opinion -> 371 dòng
+
+[ERROR] MISSING_LABEL_FILE   img_0031  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0053  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0126  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0135  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0170  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0219  ảnh không có file nhãn
+[WARN ] BOX_HUGE             img_0018.txt:1  Khung chiếm 97.0% diện tích ảnh chuẩn hóa
+[WARN ] BOX_HUGE             img_0128.txt:1  Khung chiếm 98.8% diện tích ảnh chuẩn hóa
+[WARN ] BOX_HUGE             img_0196.txt:1  Khung chiếm 98.4% diện tích ảnh chuẩn hóa
+[WARN ] BOX_TINY             img_0026.txt:6  Cạnh ngắn của khung chỉ có 11.41 px
+[WARN ] BOX_TINY             img_0030.txt:9  Cạnh ngắn của khung chỉ có 9.812 px
+[WARN ] BOX_TINY             img_0051.txt:5  Cạnh ngắn của khung chỉ có 8.906 px
+[WARN ] BOX_TINY             img_0069.txt:2  Cạnh ngắn của khung chỉ có 11.22 px
+[WARN ] BOX_TINY             img_0161.txt:2  Cạnh ngắn của khung chỉ có 10.26 px
+[WARN ] BOX_TINY             img_0161.txt:3  Cạnh ngắn của khung chỉ có 11.4 px
+[WARN ] BOX_TINY             img_0161.txt:4  Cạnh ngắn của khung chỉ có 11.87 px
+[WARN ] EMPTY_LABEL          img_0004  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0013  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0050  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0057  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0065  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0097  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0103  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0104  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0129  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0147  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0157  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0178  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0184  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0192  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0194  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] POSSIBLE_FALSE_POS   img_0024.txt:7  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0030.txt:9  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0035.txt:2  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0068.txt:7  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0069.txt:2  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0070.txt:6  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0078.txt:2  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0091.txt:7  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0092.txt:9  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0095.txt:6  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0099.txt:14  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0100.txt:4  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0111.txt:2  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0144.txt:1  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0149.txt:3  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0150.txt:3  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0155.txt:2  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0155.txt:3  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0177.txt:2  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0180.txt:5  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0189.txt:4  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0193.txt:6  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0204.txt:1  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_FALSE_POS   img_0206.txt:1  Khung nhãn không khớp dự đoán nào
+[WARN ] POSSIBLE_LOOSE_BOX   img_0015  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0015  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0018  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0021  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0023  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0030  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0036  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0038  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0045  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0045  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0046  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0051  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0054  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0058  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0062  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0062  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0063  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0064  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0068  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0069  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0074  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0075  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0077  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0081  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0082  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0090  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0091  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0092  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0094  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0094  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0094  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0094  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0096  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0105  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0108  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0116  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0119  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0125  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0131  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0142  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0155  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0169  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0171  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0171  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0175  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0175  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0175  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0179  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0182  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0185  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0188  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0200  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0210  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0217  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_LOOSE_BOX   img_0217  Khung cùng lớp có thể lỏng hoặc lệch
+[WARN ] POSSIBLE_MISSING     img_0001  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0001  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0004  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0004  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0005  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0005  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0012  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0014  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0014  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0014  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0019  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0020  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0020  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0020  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0021  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0021  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0022  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0024  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0024  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0027  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0028  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0029  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0030  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0030  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0032  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0032  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0032  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0032  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0036  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0037  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0045  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0047  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0047  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0050  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0051  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0057  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0058  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0058  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0058  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0058  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0058  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0058  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0064  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0065  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0066  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0066  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0067  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0067  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0067  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0067  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0067  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0068  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0068  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0068  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0073  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0074  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0074  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0074  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0074  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0074  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0075  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0078  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0084  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0086  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0087  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0091  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0091  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0091  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0092  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0093  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0094  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0095  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0096  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0097  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0099  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0099  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0099  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0099  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0099  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0099  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0100  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0100  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0100  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0100  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0103  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0104  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0105  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0106  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0106  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0108  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0114  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0114  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0114  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0114  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0116  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0116  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0117  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0119  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0119  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0119  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0121  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0124  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0124  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0124  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0124  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0124  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0125  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0125  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0125  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0127  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0131  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0133  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0133  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0133  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0134  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0134  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0134  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0137  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0138  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0138  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0138  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0142  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0144  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0145  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0147  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0151  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0155  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0157  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0159  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0160  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0163  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0164  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0165  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0165  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0165  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0165  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0169  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0169  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0178  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0182  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0184  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0185  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0187  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0187  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0187  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0188  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0188  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0191  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0192  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0192  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0192  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0194  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0195  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0195  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0195  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0195  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0195  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0196  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0199  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0199  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0199  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0200  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0204  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0205  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0205  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0205  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0205  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0208  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0210  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0210  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0210  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0211  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0211  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0211  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0211  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0215  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0215  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0218  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0220  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0220  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0220  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0220  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0220  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0224  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0224  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0224  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_MISSING     img_0224  Dự đoán có vật thể chưa được gán khung
+[WARN ] POSSIBLE_WRONG_CLASS img_0019  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0020  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0021  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0024  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0034  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0037  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0070  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0071  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0075  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0083  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0092  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0112  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0124  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0124  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0160  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0180  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0183  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0185  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0191  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0202  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0208  Khung khớp với dự đoán nhưng khác lớp
+[WARN ] POSSIBLE_WRONG_CLASS img_0212  Khung khớp với dự đoán nhưng khác lớp
+
+## Tổng hợp theo mã
+error MISSING_LABEL_FILE     6
+warn  BOX_HUGE               3
+warn  BOX_TINY               7
+warn  EMPTY_LABEL            15
+warn  POSSIBLE_FALSE_POS     24
+warn  POSSIBLE_LOOSE_BOX     59
+warn  POSSIBLE_MISSING       266
+warn  POSSIBLE_WRONG_CLASS   22

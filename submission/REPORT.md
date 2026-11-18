@@ -23,7 +23,9 @@ TODO(học viên): vì sao `05_review_queue.csv` xếp ảnh đầu hàng như v
 Ở ngưỡng 16, calibration ghi precision 1,00 và recall 5/6 cho ảnh trùng gần. Khi thử ngưỡng này chỉ giữa các ảnh raw, 2 trong 3 cặp gắn cờ thêm so với ngưỡng 12 là ảnh khác cảnh: `img_0011` (tennis) và `img_0008` (trượt tuyết), `img_0177` (lướt sóng) và `img_0113` (người ngồi ăn). Ngưỡng 12 giảm rủi ro loại nhầm và chấp nhận bỏ sót cặp ảnh cùng cảnh `img_0084`–`img_0074` có khoảng cách 16.
 
 ## 4. Cửa chặn và điều pipeline KHÔNG bắt được
-TODO(học viên): (a) chứng minh gate chặn đúng: chạy `python -m pipeline.run --budget 0 --reports work/rep_nb --export-dir work/exp_nb` (không có người duyệt nên ảnh thiếu file nhãn còn nguyên), chỉ ra kết luận **Rework**, mã thoát 20 và việc **không xuất** dataset. (Đừng sửa tay `work/run/ds`: pipeline dựng lại thư mục này từ raw mỗi lần chạy.) (b) ≥ 2 điểm mù có bằng chứng (box lỏng nhẹ, nhầm lớp mà model lớn cũng nhầm, ảnh trùng biến đổi mạnh…).
+Chạy `python -m pipeline.run --budget 0` với thư mục báo cáo và xuất riêng. Kết quả **Rework**, mã thoát **20**. Còn 6 lỗi bắt buộc và 136/202 ảnh có cảnh báo (67,3%). Pipeline ghi “KHÔNG xuất” và `Test-Path` trả về `False` cho thư mục xuất của lần chạy này.
+
+TODO(học viên): ≥ 2 điểm mù có bằng chứng (box lỏng nhẹ, nhầm lớp mà model lớn cũng nhầm, ảnh trùng biến đổi mạnh…).
 
 ## 5. Train: raw vs clean (tùy chọn, chấm riêng)
 Chưa train: ghi "chưa chạy" và lý do, rồi bỏ qua phần còn lại của mục này. Nếu đã train: dán bảng từ `submission/results/comparison.md` (model, epoch, seed, số ảnh train mỗi biến thể).

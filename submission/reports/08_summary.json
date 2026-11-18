@@ -1,0 +1,18 @@
+{
+  "verdict": {
+    "decision": "Hold",
+    "n_errors": 0,
+    "n_warn_images": 62,
+    "n_images": 202,
+    "warn_ratio": 0.3069,
+    "reasons": [
+      "62/202 ảnh còn cảnh báo (30.7%), đạt hoặc vượt ngưỡng 10.0%."
+    ]
+  },
+  "reviewed": 80,
+  "budget": 80,
+  "seconds": 8.2,
+  "exported": "D:\\Project\\K5-L23-Day09-NguyenVanNhat-2A202603278-AutoQC-Pipeline-Lab\\submission\\export\\clean_v1",
+  "config_sha1": "78abb4ce79dc9aa9ff39772363bbe5f4ebc45191",
+  "review_sim_sha1": "7988ca22827f780a7043a2300490e679a1697154"
+}
