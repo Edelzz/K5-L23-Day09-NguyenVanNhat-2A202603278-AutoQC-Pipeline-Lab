@@ -17,10 +17,10 @@ TODO(học viên): vì sao `05_review_queue.csv` xếp ảnh đầu hàng như v
 ## 3. Calibration (2 ngưỡng)
 | Tham số | Khởi đầu | Đã chọn | Precision / Recall (trước → sau) | Lý do (đánh đổi) |
 |---|---|---|---|---|
-| `duplicates.phash_dist` | 2 | TODO(học viên) | | |
-| `second_opinion.conf` | 0.25 | TODO(học viên) | | |
+| `duplicates.phash_dist` | 2 | 12 | Trùng gần: 1,00 / 0,50 → 1,00 / 0,67 (3/6 → 4/6) | Giữ precision trên calib và gắn cờ thêm hai cặp trong phép so nội bộ tập raw. |
+| `second_opinion.conf` | 0.25 | 0.10 | Khung lỏng: 0,29 / 0,40 → 0,38 / 0,60 (2/5 → 3/5). Thiếu khung: 0,50 / 1,00 → 0,40 / 1,00 (8/8 ở cả hai ngưỡng). | Chấp nhận thêm 4 cờ thiếu khung sai (8 → 12) để phát hiện thêm 1/5 ca khung lỏng. Recall nhầm lớp giữ ở 5/6. |
 
-TODO(học viên): **một chỗ calibration có thể đánh lừa bạn**, kèm bằng chứng từ dữ liệu của bạn (vd. mở xem vài cặp ảnh bị cho là trùng; số ảnh bị loại ở bước 1 có hợp lý không?).
+Ở ngưỡng 16, calibration ghi precision 1,00 và recall 5/6 cho ảnh trùng gần. Khi thử ngưỡng này chỉ giữa các ảnh raw, 2 trong 3 cặp gắn cờ thêm so với ngưỡng 12 là ảnh khác cảnh: `img_0011` (tennis) và `img_0008` (trượt tuyết), `img_0177` (lướt sóng) và `img_0113` (người ngồi ăn). Ngưỡng 12 giảm rủi ro loại nhầm và chấp nhận bỏ sót cặp ảnh cùng cảnh `img_0084`–`img_0074` có khoảng cách 16.
 
 ## 4. Cửa chặn và điều pipeline KHÔNG bắt được
 TODO(học viên): (a) chứng minh gate chặn đúng: chạy `python -m pipeline.run --budget 0 --reports work/rep_nb --export-dir work/exp_nb` (không có người duyệt nên ảnh thiếu file nhãn còn nguyên), chỉ ra kết luận **Rework**, mã thoát 20 và việc **không xuất** dataset. (Đừng sửa tay `work/run/ds`: pipeline dựng lại thư mục này từ raw mỗi lần chạy.) (b) ≥ 2 điểm mù có bằng chứng (box lỏng nhẹ, nhầm lớp mà model lớn cũng nhầm, ảnh trùng biến đổi mạnh…).
